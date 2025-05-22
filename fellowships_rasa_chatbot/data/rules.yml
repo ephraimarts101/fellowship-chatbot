@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+- rule: thank the user
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- rule: Say goodbye to the user
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+

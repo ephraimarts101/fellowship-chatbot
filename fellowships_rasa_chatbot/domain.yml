@@ -1,0 +1,57 @@
+version: "3.1"
+
+intents:
+  - greet
+  - tell_name
+  - tell_location
+  - thank_you
+  - goodbye
+
+entities:
+    - location
+    - user_name
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+  user_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: user_name
+
+responses:
+  utter_greet:
+    - text: "Hello! Before we proceed, please tell me your name"
+
+  utter_ask_location:
+    - text: |
+        Welcome {user_name}! I can help you find a suitable place to worship in AE-FUNAI.
+
+        Which of these places do you stay?
+        (Front Gate, Back Gate, Junction, Perm Site, Nwakpu)
+
+  utter_thank_you:
+    - text: |
+        Thank you for chatting with me, {user_name}.
+        I am always here if you have any question about place to worship.
+
+  utter_goodbye:
+    - condition:
+        - type: slot
+          name: user_name
+          value: null
+      text: "Goodbye! Do have a wonderful service!"
+    - text: "Goodbye {user_name}! Do have wonderful service!"
+
+
+actions:
+  - action_recommend_fellowships
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

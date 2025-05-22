@@ -1,0 +1,55 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+FELLOWSHIP/node_modules
+FELLOWSHIP/dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python virtual environment
+fellowships_rasa_chatbot/rasa_venv/
+
+Lib/
+
+rasa_venv/
+
+
+# Rasa cache and logs
+.rasa/
+
+#bot test results
+results/
+
+# Rasa model files
+
+# Python junk
+__pycache__/
+*.pyc
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+tests/
+fellowships_rasa_chatbot/models/20250515-234556-dense-chili.tar.gz
+fellowships_rasa_chatbot/models/20250516-151453-foggy-control.tar.gz
+fellowships_rasa_chatbot/models/20250516-210907-loud-stager.tar.gz

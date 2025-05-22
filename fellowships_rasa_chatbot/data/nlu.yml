@@ -1,0 +1,63 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hey
+    - good day
+    - greetings
+    - good morning
+    - good afternoon
+    - good evening
+    - what's up
+
+- intent: tell_name
+  examples: |
+    - My name is [Ernest](user_name).
+    - I am [Joseph](user_name).
+    - My name is [Jerry](user_name).
+    - They call me [Chibuike](user_name)
+    - I am [Catherine](user_name)
+    - [Cynthia](user_name)
+    - My name is [Obinna](user_name).
+    - [Ekenedilichukwu](user_name) is my name.
+    - I'm called [Stanley](user_name)
+    - [Blessing](user_name)
+    - You can call me [Henry](user_name)
+    - It's [Joy](user_name)
+    - People call me [Uche](user_name)
+
+
+- intent: tell_location
+  examples: |
+    - I stay at [Back Gate](location).
+    - I live in [Nwakpu](location)
+    - I am currently staying at [Front gate](location).
+    - I am living at [Junction](location)
+    - [Perm Site](location)
+    - [Nwakpu](location)
+    - [Ezzamgbo](location)
+  
+- intent: thank_you
+  examples: |
+    - thank you
+    - I appreciate it
+    - thanks a lot
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - See you later
+    - talk to you later
+    - have a nice day
+
+- lookup: location
+  examples: |
+    - Front Gate
+    - Back Gate
+    - Junction
+    - Perm Site
+    - Nwakpu
+    - Ezzamgbo
+
